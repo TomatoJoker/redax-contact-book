@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/redax-contact-book/static/css/main.6f37e4dd.css",
+    "main.js": "/redax-contact-book/static/js/main.9ae7997e.js",
+    "index.html": "/redax-contact-book/index.html",
+    "main.6f37e4dd.css.map": "/redax-contact-book/static/css/main.6f37e4dd.css.map",
+    "main.9ae7997e.js.map": "/redax-contact-book/static/js/main.9ae7997e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f37e4dd.css",
+    "static/js/main.9ae7997e.js"
+  ]
+}
