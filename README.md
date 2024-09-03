@@ -1,3 +1,3 @@
 # React homework template
 
-StackL: React, Redux, Tailwind
+Stack: React, Redux, Tailwind
