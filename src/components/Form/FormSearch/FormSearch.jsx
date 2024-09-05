@@ -16,6 +16,7 @@ const FormSearch = (props) => {
     { value: statusFilters.mob, label: statusFilters.mob },
     { value: statusFilters.home, label: statusFilters.home }
   ]
+
   const handleSaveName = (value) => {
     setName(value);
   }
@@ -39,14 +40,18 @@ const FormSearch = (props) => {
     <form className='border-black border-[1px] p-[20px] flex flex-col items-start max-w-[500px]'>
       <FormInput label='Name' name='name' placeholder='Your name' change={handleSaveName}/>
       <FormInput label='Number' name='phone' placeholder='Your phone' change={handleSavePhone}/>
-      <Select
-        options={options}
-        className='w-full max-w-[300px] p-[0px]'
-        onChange={handleSelect}
-        classNames={{
-          control: (state) =>
-            state.isFocused ? 'rounded-none border-[1px] w-full border-gray-600 px-[2px] py-[3px]' : 'rounded-none border-[1px] w-full border-gray-600 px-[8px] py-[3px]',
-        }} />
+      <div className='flex flex-col max-w-[300px] w-full gap-[10px]'>
+        <label className="text-xl" htmlFor="filter">Filter</label>
+        <Select
+          id='filter'
+          options={options}
+          className='w-full max-w-[300px] p-[0px]'
+          onChange={handleSelect}
+          classNames={{
+            control: (state) =>
+              state.isFocused ? 'rounded-none border-[1px] w-full border-gray-600 px-[2px] py-[3px]' : 'rounded-none border-[1px] w-full border-gray-600 px-[8px] py-[3px]',
+          }} />
+      </div>
       <FormButton value='Send' click={handleChange}/>
     </form>
   )

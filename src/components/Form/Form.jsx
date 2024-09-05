@@ -4,6 +4,8 @@ import FormSearch from './FormSearch';
 import FormList from './FormList';
 import FilterButtons from './FilterButtons';
 import { statusFilters } from '../../redux/constants';
+import { getContacts } from '../../redux/contactSlice';
+import { getFilter } from '../../redux/filterSlice';
 
 const getVisibleTasks = (contacts, statusFilter, statusFilters) => {
 
@@ -15,10 +17,8 @@ const getVisibleTasks = (contacts, statusFilter, statusFilters) => {
 };
 
 const Form = () => {
-  const contacts = useSelector(state => state.contactReducer.contacts);
-  const statusFilter = useSelector(state => state.filterReducer.status);
-
-  console.log(getVisibleTasks(contacts, statusFilter, statusFilters));
+  const contacts = useSelector(getContacts);
+  const statusFilter = useSelector(getFilter);
 
   return (
     <>

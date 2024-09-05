@@ -5,7 +5,7 @@ const statusInitial = {
   status: statusFilters.all
 };
 
-const filterSlice = createSlice({
+export const filterSlice = createSlice({
   name: 'filter',
   initialState: statusInitial,
   reducers: {
@@ -15,6 +15,6 @@ const filterSlice = createSlice({
   },
 })
 
-export const { setStatus } = filterSlice.actions;
+export const getFilter = (state) => state.filterReducer.status;
 
-export default filterSlice;
+export const { setStatus } = filterSlice.actions;
